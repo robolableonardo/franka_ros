@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>franka_controllers_AI4M</name>
+  <version>0.1.0</version>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>Apache 2.0</license>
+
+
+  <!-- Url tags are optional, but multiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <!-- Example: -->
+  <!-- <url type="website">http://wiki.ros.org/franka_controllers_AI4M</url> -->
+
+
+  <!-- Author tags are optional, multiple are allowed, one per tag -->
+  <!-- Authors do not have to be maintainers, but could be -->
+  <!-- Example: -->
+  <!-- <author email="jane.doe@example.com">Jane Doe</author> -->
+  <author >AI4M_LDOLabs</author>
+  <description>franka_controllers_AI4M provides custom code for controlling Franka Emika research robots with ros_control</description>
+  <maintainer email="robolab.leonardo@gmail.com">AI for Manufacturing Lab @ Leonardo S.p.a.</maintainer>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>message_generation</build_depend>
+  <build_depend>eigen</build_depend>
+
+  <build_export_depend>message_runtime</build_export_depend>
+
+  <depend>controller_interface</depend>
+  <depend>dynamic_reconfigure</depend>
+  <depend>eigen_conversions</depend>
+  <depend>franka_hw</depend>
+  <depend>franka_gripper</depend>
+  <depend>geometry_msgs</depend>
+  <depend>hardware_interface</depend>
+  <depend>tf</depend>
+  <depend>tf_conversions</depend>
+  <depend>libfranka</depend>
+  <depend>pluginlib</depend>
+  <depend>realtime_tools</depend>
+  <depend>roscpp</depend>
+
+  <exec_depend>franka_control</exec_depend>
+  <exec_depend>franka_description</exec_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <exec_depend>panda_moveit_config</exec_depend>
+  <exec_depend>rospy</exec_depend>
+
+  <export>
+    <controller_interface plugin="${prefix}/franka_controllers_AI4M_plugin.xml"/>
+  </export>
+</package>
