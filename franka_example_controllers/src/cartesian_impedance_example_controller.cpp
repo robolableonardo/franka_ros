@@ -179,6 +179,7 @@ void CartesianImpedanceExampleController::update(const ros::Time& /*time*/,
                         (2.0 * sqrt(nullspace_stiffness_)) * dq);
   // Desired torque
   tau_d << tau_task + tau_nullspace + coriolis;
+//  tau_d << tau_task + coriolis;
   // Saturate torque rate to avoid discontinuities
   tau_d << saturateTorqueRate(tau_d, tau_J_d);
   for (size_t i = 0; i < 7; ++i) {
