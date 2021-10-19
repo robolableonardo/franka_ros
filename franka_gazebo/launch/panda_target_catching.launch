@@ -93,6 +93,7 @@
     </node>
 
     <include file="$(find target_estimation)/launch/single_target.launch" if="$(arg target_catching)">
+<!--    <include file="$(find target_estimation)/launch/debug_launch.launch" if="$(arg target_catching)">-->
     </include>
 
   </group>
